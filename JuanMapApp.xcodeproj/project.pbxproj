@@ -13,6 +13,9 @@
 		4930108C1B8AB45B002D88A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4930108B1B8AB45B002D88A7 /* Images.xcassets */; };
 		4930108F1B8AB45B002D88A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4930108D1B8AB45B002D88A7 /* LaunchScreen.xib */; };
 		4930109B1B8AB45B002D88A7 /* JuanMapAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4930109A1B8AB45B002D88A7 /* JuanMapAppTests.swift */; };
+		493010A71B8AB9DD002D88A7 /* StartingContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493010A61B8AB9DD002D88A7 /* StartingContentViewController.swift */; };
+		493010A91B8ABE82002D88A7 /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 493010A81B8ABE82002D88A7 /* StartingViewController.swift */; };
+		493010AB1B8AC9AD002D88A7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493010AA1B8AC9AD002D88A7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		493010941B8AB45B002D88A7 /* JuanMapAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JuanMapAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		493010991B8AB45B002D88A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4930109A1B8AB45B002D88A7 /* JuanMapAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuanMapAppTests.swift; sourceTree = "<group>"; };
+		493010A61B8AB9DD002D88A7 /* StartingContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingContentViewController.swift; sourceTree = "<group>"; };
+		493010A81B8ABE82002D88A7 /* StartingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		493010AA1B8AC9AD002D88A7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				493010AB1B8AC9AD002D88A7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		493010761B8AB45B002D88A7 = {
 			isa = PBXGroup;
 			children = (
+				493010AA1B8AC9AD002D88A7 /* MapKit.framework */,
 				493010811B8AB45B002D88A7 /* JuanMapApp */,
 				493010971B8AB45B002D88A7 /* JuanMapAppTests */,
 				493010801B8AB45B002D88A7 /* Products */,
@@ -83,6 +91,8 @@
 				4930108B1B8AB45B002D88A7 /* Images.xcassets */,
 				4930108D1B8AB45B002D88A7 /* LaunchScreen.xib */,
 				493010821B8AB45B002D88A7 /* Supporting Files */,
+				493010A61B8AB9DD002D88A7 /* StartingContentViewController.swift */,
+				493010A81B8ABE82002D88A7 /* StartingViewController.swift */,
 			);
 			path = JuanMapApp;
 			sourceTree = "<group>";
@@ -161,6 +171,11 @@
 				TargetAttributes = {
 					4930107E1B8AB45B002D88A7 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					493010931B8AB45B002D88A7 = {
 						CreatedOnToolsVersion = 6.4;
@@ -213,6 +228,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				493010871B8AB45B002D88A7 /* ViewController.swift in Sources */,
+				493010A71B8AB9DD002D88A7 /* StartingContentViewController.swift in Sources */,
+				493010A91B8ABE82002D88A7 /* StartingViewController.swift in Sources */,
 				493010851B8AB45B002D88A7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JuanMapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -350,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = JuanMapApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +428,7 @@
 				493010A01B8AB45B002D88A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		493010A11B8AB45B002D88A7 /* Build configuration list for PBXNativeTarget "JuanMapAppTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +437,7 @@
 				493010A31B8AB45B002D88A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
